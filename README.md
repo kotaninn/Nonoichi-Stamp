@@ -23,7 +23,7 @@ cp -r "/c/Users/<PCのユーザー名>/AndroidStudioProjects/<プロジェクト
 git init
 
 # GitHub リポジトリを origin に設定
-git remote add origin https://<USERNAME>@github.com/<USERNAME>/<REPO>.git
+git remote add origin https://<USERNAME>(Githubのユーザ名)@github.com/<USERNAME>/<REPO>.git
 
 # URL を確認
 git remote -v
