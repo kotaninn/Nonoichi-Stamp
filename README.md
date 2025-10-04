@@ -11,38 +11,84 @@ https://codeforfun.jp/how-to-install-android-studio-windows-and-mac/
 3.Android Stdioで新規プロジェクト作成する(以下のサイトを参考に)
 https://courses.codeforfun.jp/courses/1597880/lectures/47723566
 *C:\Users\<PCのユーザー名>\AndroidStudioProjects\<プロジェクト名>
-*小谷API26にしたけど21でも問題ない
+*小谷はAPI26にしたけど21でも問題ない
 *プロジェクト名は名前は自分が分かるものなら何でもいいよ
 
-# Bash connect GithubとAndroid Studioを同期
+# =========================================
+# 1. GitHub リポジトリを origin に設定
+# =========================================
+# まだ origin が設定されていない場合のみ
+git remote add origin https://github.com/<USERNAME>/<REPO>.git
 
-mkdir ~/github
-cd ~/github
-cp -r "/c/Users/<PCのユーザー名>/AndroidStudioProjects/<プロジェクト名>/"* .
-# Git 初期化
-git init
+# ※古いoriginがある場合は削除して再設定
+# git remote remove origin
+# git remote add origin https://github.com/<USERNAME>/<REPO>.git
 
-# GitHub リポジトリを origin に設定
-git remote add origin https://<USERNAME>(Githubのユーザ名)@github.com/<USERNAME>/<REPO>.git
 
-# URL を確認
+# =========================================
+# 2. URL を確認
+# =========================================
 git remote -v
 
-# ファイル追加
+
+# =========================================
+# 3. ファイルを追加
+# =========================================
 git add .
 
-# commit 作成
+
+# =========================================
+# 4. コミットを作成
+# =========================================
 git commit -m "Initial commit"
 
-# ブランチ名確認・変更
+
+# =========================================
+# 5. ブランチ名を main に変更（必要なら）
+# =========================================
 git branch -M main
 
-# GitHub に push（PAT 使用）
+
+# =========================================
+# 6. GitHub へ Push（PATを使用）
+# =========================================
 git push -u origin main
 
+1. トークンを発行する
 
-# Android Stdio コードファイルの変更後、Bashの方でやること
+    GitHub右上のアイコン → Settings（設定）
+
+    左メニューから Developer settings
+
+    Personal access tokens → Tokens (classic) を選択
+    （または「Fine-grained tokens」でもOK）
+
+    「Generate new token」→「classic」選択
+
+    チェックを入れる範囲
+    repo
+    workflow
+    read:org
+
+    「Generate token」をクリックして、出てきた トークン文字列をコピー
+
+2. Git Bashで push するときの入力
+    Username for 'https://github.com': <あなたのGitHubユーザ名>
+    Password for 'https://github.com': <ここにトークンを貼り付け>
+
+Android Studio側でコード変更後の流れ 
+
+# 変更を確認（オプション）
+git status
+
+# 変更ファイルを追加
 git add .
-git commit -m "変更内容"
+
+# コミット作成（メッセージは変更内容を記述）
+git commit -m "MainActivity に NFC タッチ機能追加"
+
+# GitHubへアップロード
 git push
 
+# ディレクトリなどのclone
+git clone https://github.com/kotaninn/Nonoichi-Stamp.git
