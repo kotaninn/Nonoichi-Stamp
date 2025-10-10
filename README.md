@@ -18,47 +18,43 @@ DLで暇な人へ
 https://learngitbranching.js.org/?locale=ja
 でGithubに慣れましょう
 
-# =========================================
+
 # 1. GitHub リポジトリを origin に設定
-# =========================================
-# まだ origin が設定されていない場合のみ
-git remote add origin https://github.com/<USERNAME>/<REPO>.git
 
-# ※古いoriginがある場合は削除して再設定
-# git remote remove origin
-# git remote add origin https://github.com/<USERNAME>/<REPO>.git
+ まだ origin が設定されていない場合
+git remote add origin https://github.com/<自分のGithubユーザー名>/Nonoichi-Stamp.git
+
+　 ※古いoriginがある場合は削除して再設定
+ git remote remove origin
+ git remote add origin https://github.com/<自分のGithubユーザー名>/Nonoichi-Stamp.git
 
 
-# =========================================
 # 2. URL を確認
-# =========================================
+
 git remote -v
 
 
-# =========================================
 # 3. ファイルを追加
-# =========================================
+
 git add .
 
 
-# =========================================
 # 4. コミットを作成
-# =========================================
+
 git commit -m "Initial commit"
 
 
-# =========================================
 # 5. ブランチ名を main に変更（必要なら）
-# =========================================
+
 git branch -M main
 
 
-# =========================================
+
 # 6. GitHub へ Push（PATを使用）
-# =========================================
+
 git push -u origin main
 
-1. トークンを発行する
+# トークンを発行する
 
     GitHub右上のアイコン → Settings（設定）
 
