@@ -89,6 +89,3 @@ git commit -m "MainActivity に NFC タッチ機能追加"
 
 # GitHubへアップロード
 git push
-
-# ディレクトリなどのclone
-git clone https://github.com/kotaninn/Nonoichi-Stamp.git
