@@ -18,7 +18,7 @@ https://courses.codeforfun.jp/courses/1597880/lectures/47723566
 git clone https://github.com/<USERNAME>/Nonoichi-Stamp.git
 
 # 毎回の開発前にやること
-1. 今のブランチの確認\n
+1. 今のブランチの確認
  git branch
  (ここでfeature/〇〇になっていることを確認
  →もしなってなかったらgit checkout feature/〇〇で変更)
