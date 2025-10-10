@@ -17,6 +17,13 @@ https://courses.codeforfun.jp/courses/1597880/lectures/47723566
 4.Github Bashでこのコードを打つ
 git clone https://github.com/<USERNAME>/Nonoichi-Stamp.git
 
+毎回の開発後にやること
+git add .             　　　　　　 # 変更したすべてのファイルをステージング
+git commit -m "歩数表示機能を追加"  # コミットメッセージは何を変更したかを書く
+git push origin main  　　　　　　 # GitHub の main ブランチに送る
+git pull origin main  　　　　　　 # GitHub の最新変更をローカルに取り込む
+
+
 
 DLで暇な人へ
 https://learngitbranching.js.org/?locale=ja
