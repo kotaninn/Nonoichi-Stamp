@@ -14,6 +14,10 @@ https://courses.codeforfun.jp/courses/1597880/lectures/47723566
 *小谷はAPI26にしたけど21でも問題ない
 *プロジェクト名は名前は自分が分かるものなら何でもいいよ
 
+DLで暇な人へ
+https://learngitbranching.js.org/?locale=ja
+でGithubに慣れましょう
+
 # =========================================
 # 1. GitHub リポジトリを origin に設定
 # =========================================
